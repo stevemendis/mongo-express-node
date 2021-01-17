@@ -73,5 +73,5 @@ function validateGenre(genre) {
 }
 
 http.listen(3000, () => {
-    console.log('connected')
+    console.log('connected to port 3000')
 })
