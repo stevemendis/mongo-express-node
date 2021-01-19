@@ -1,10 +1,15 @@
 
+const logger = require('./logger')
+
+const authenticator = require('./authenticator')
 const express = require('express')
 const app = express()
 const http = require('http').Server(app)
 const Joi = require('joi') // Class is returned
 
 app.use(express.json())
+app.use(logger)
+app.use(authenticator)
 
 const genres = [
     { 'id': 1, 'genre': 'comedy' }
